@@ -1349,7 +1349,7 @@ describe('CatsController', () => {
 
 ?> `compile()`方法是**异步**的，因此必须等待执行完成。一旦模块编译完成，您可以使用 `get()` 方法获取任何声明的静态实例(控制器和提供者)。
 
-`TestingModule`继承自[module reference](https://docs.nestjs.com/fundamentals/module-ref)类，因此具备动态处理提供者的能力(暂态的或者请求范围的)，可以使用`resolve() `方法(`get()`方法尽可以获取静态实例).
+`TestingModule`继承自[module reference](https://docs.nestjs.com/fundamentals/module-ref)类，因此具备动态处理提供者的能力(暂态的或者请求范围的)，可以使用`resolve() `方法(`get()`方法只可以获取静态实例).
 
 ```typescript
 const moduleRef = await Test.createTestingModule({
